@@ -1,10 +1,15 @@
 # Multi-Object-detection
 Multi object detection using mobilenet weights
 import cv2 # import opencv
+
 import matplotlib.pyplot as plt
+
 config_file = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+
 frozen_model = 'frozen_inference_graph.pb'
+
 model = cv2.dnn_DetectionModel(frozen_model,config_file) # after dnn press tab this will give you options to comands
+
 classLabels = [] # empty list of python
 file_name = 'coco_labels.txt'
 with open(file_name, 'rt') as fpt:
